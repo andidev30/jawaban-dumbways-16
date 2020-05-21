@@ -15,7 +15,7 @@
                 echo "uang anda pas";
             }else {
                 if ($sisa >= 50000) {
-                    $jumlah = $sisa / 50000;
+                    $jumlah = $sisa % 50000;
                     echo $jumlah . " X 50000";
                     $sisa = $sisa - (jumlah * 50000);
                 }
@@ -38,4 +38,4 @@
         }
     }
 
-    hitungKembalian(5000, 20000);
+    hitungKembalian(5000, 55000);
