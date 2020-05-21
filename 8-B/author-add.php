@@ -1,7 +1,7 @@
 <?php 
 
     // include "con.php"; 
-    include "author/list.php";
+    // include "author/save.php";
 
     // var_dump($list);die;
 
@@ -42,7 +42,7 @@
                         <a class="nav-link" href="#">Course </a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Author  <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#">Author <span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
@@ -57,44 +57,28 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Author</a></li>
-                <li class="breadcrumb-item active" aria-current="page">List</li>
+                <li class="breadcrumb-item active" aria-current="page">Add</li>
             </ol>
         </nav>
     </div>
 
     <div class="container section">
-        <h2 class="text-center">Data Author</h2>
-        <hr>
-        <a href="tambah data" class="btn btn-primary btn-large">Tambah Data</a>
-        <br><br>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">Name Author</th>
-                    <th scope="col">Action</th>
-                </tr>
-            </thead>
-            <tbody>
-            <?php 
-                if( mysqli_num_rows($list) > 0 ){ 
-                    $no = 1;
-                    while( $data = mysqli_fetch_array($list) ){
-            ?>
-                <tr>
-                    <th scope="row"><?php echo $no++ ?></th>
-                    <th><?php echo $data['name'] ?></th>
-                    <td>
-                        <a href="author/delete.php?id=<?php echo $data['id'] ?>" class="btn btn-danger">Delete</a>
-                        <a href="author-edit.php?id=<?php echo $data['id'] ?>" class="btn btn-warning">Edit</a>
-                    </td>
-                </tr>
-            <?php
-                    } 
-                } 
-            ?>
-            </tbody>
-        </table>
+        <form method="post" action="author/save.php">
+            <fieldset>
+                <legend>Add Author</legend>
+                <br>
+                <div class="form-group row">
+                    <label for="inputname" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="name" class="form-control" id="inputname" placeholder="Name">
+                    </div>
+                </div>
+
+                <br>
+                <button type="submit" class="btn btn-primary btn-large">Save</button>
+                <a href="author.php" class="btn btn-danger btn-large">Cancel</a>
+            </fieldset>
+        </form>
     </div>
 
     <script src="dist/js/jquery-3.4.1.min.js"></script>
