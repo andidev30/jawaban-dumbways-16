@@ -3,8 +3,11 @@
 }
 
 .section h2 {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     font-size: 30px;
+}
+.section hr {
+    margin-bottom: 40px;
 }
 
 .course-list .course {
