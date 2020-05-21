@@ -1,3 +1,5 @@
+<?php include "con.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
