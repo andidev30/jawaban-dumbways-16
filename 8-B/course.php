@@ -1,7 +1,7 @@
 <?php 
 
     // include "con.php"; 
-    // include "author/save.php";
+    include "author/list.php";
 
     // var_dump($list);die;
 
@@ -83,7 +83,9 @@
                     <label for="" class="col-sm-2 col-form-label">Name Author</label>
                     <div class="col-sm-10">
                         <select name="id_author" class="form-control">
-                            <option value="1">1</option>
+                            <?php while( $data = mysqli_fetch_array($list) ){ ?>
+                                <option value="<?php echo $data['id'] ?>"><?php echo $data['name'] ?></option>
+                            <?php } ?>
                         </select>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 <?php 
 
     // include "con.php"; 
-    // include "author/save.php";
+    include "course/list.php";
 
     // var_dump($list);die;
 
@@ -89,7 +89,9 @@
                     <label for="" class="col-sm-2 col-form-label">Course</label>
                     <div class="col-sm-10">
                         <select name="id_course" class="form-control">
-                            <option value="1">nama kursus</option>
+                        <?php while( $data = mysqli_fetch_array($list) ){ ?>
+                            <option value="<?php echo $data['id'] ?>"><?php echo $data['name'] ?></option>
+                        <?php } ?>
                         </select>
                     </div>
                 </div>
