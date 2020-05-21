@@ -33,16 +33,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Content</a>
+                        <a class="nav-link" href="content.php">Content</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Course <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="course.php">Course <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Author</a>
+                        <a class="nav-link" href="author.php">Author</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
@@ -56,7 +56,7 @@
     <div class="container-fluid mt-4">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Course</a></li>
+                <li class="breadcrumb-item"><a href="course.php">Course</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Add</li>
             </ol>
         </nav>
